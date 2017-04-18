@@ -58,18 +58,16 @@
    </div>
    <div class="form-group">
     <label>Postal:</label>
-    <input type="text"  #refPostal=ngModel  minlength="3" maxlength="10" required class="form-control" name="postal" ngModel>
+    <input type="text"  #refPostal=ngModel  pattern="^[1-9][0-9]{4}$" class="form-control" name="postal" ngModel>
     <div *ngIf="refPostal.errors && (refPostal.dirty||refPostal.touched)" class="alert alert-danger">
      
-      <div [hidden]="!refPostal.errors.required">
-      Please enter the postalcode!
+      <div [hidden]="!refPostal.errors.pattern">
+      Please enter the 5 digit postalcode!
       </div>
-      <div [hidden]="!refPostal.errors.minlength">
-      Please enter atleast 3 characters!
-      </div>
+      
      </div>
    </div>
-   <button type="submit" class='btn btn-primary center-block'>Submit</button>
+   <button [disabled]="!userForm.form.valid" type="submit" class='btn btn-primary center-block'>Submit</button>
   </form>
   </div>
  </div>
