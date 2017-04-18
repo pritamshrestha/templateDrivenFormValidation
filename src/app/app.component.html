@@ -1,3 +1,92 @@
-<h1>
-  {{title}}
-</h1>
+<!--<div class="container">
+ <div class="row">
+    <div class="col-xs-6 col-xs-offset-3"> 
+      <h1 class="text-primary text-center">Add New Name and LastName!</h1>
+      <label class="text-success">Name</label>
+      <input type="text" class="form-control" [(ngModel)]="studentsFirstName">
+      <label class="text-success">LastName</label>
+      <input type="text" class="form-control" [(ngModel)]="studentsLastName">
+      <br>
+      <button
+        class="btn btn-primary"
+        (click)="addStudentName()"> Add Name</button>
+      <button
+        class="btn btn-primary"
+        (click)="onAddBlueprint()">AddLastName</button>
+    </div>
+  </div>
+<hr>
+<div class="row">
+ <div class="col-xs-12">
+  <div class="panel panel-default" *ngFor="let element of studentsName">
+        <div class="panel-heading">{{ element.name }}</div>
+        <div class="panel-body">
+          <p>
+            <strong *ngIf="element.type === 'client'" style="color: red">{{ element.content }}</strong>
+            <em *ngIf="element.type === 'server'" style="color:green">{{ element.content }}</em>
+          </p>
+        </div>
+
+   </div>-->
+   <!--  <div> -->
+   <!-- this is the use of the string interpolation -->
+  <!-- <p class="text-primary text-center">{{name}}</p>
+   
+   <img [src]="imageLink" class="img-responsive center-block" style="max-width:300px;">
+   <p [class.myclass]="apply">This is the class binding!</p>
+  <p [style.color]="applystyle? 'blue':'orange'">This is the use of the style binding</p>
+  <button type="button" (mouseover)="getavalue($event)">click me</button>
+  <input type="text" #demoinput>
+  
+   </div>
+  this is the use of the two way databinding -->
+   <!-- <div>  -->
+   <!-- <input type="text" [(ngModel)]="fname"> -->
+   <!-- <input type="text" [(ngModel)]="lname"> -->
+   <!-- <p>fullname  {{fname}} {{lname}}</p> -->
+   <!-- <p *ngIf="elementShow" class="text-success">This is the use of the ngif directives!</p> -->
+   <!-- this is the use of the ngSwitch directives -->
+   <!-- <div [ngSwitch]="mycolor">
+    <p*ngSwitchWhen="blue">This is the red color</p>
+    <p*ngSwitchWhen="red">This is the yellow color</p>
+    <p*ngSwitchDefault>The color is invalid</p>
+ 
+   </div> -->
+    <!-- </div> -->
+    <!-- this is the use of the ngfor diretives -->
+    <!-- <div> -->
+     <!-- <ul *ngFor="let name of names"> -->
+      <!-- <li class="text-success">{{name}}</li> -->
+     <!-- </ul> -->
+    <!-- </div> -->
+    <!-- <p [ngClass]="{classone:cone,classtwo:ctwo}">This is the use of the ngClass directive!</p> -->
+    <!-- this is the use of the pipe operator -->
+    <!-- <div> -->
+    <!-- this is the use of the slice pipe -->
+    <!-- <p>{{myName|slice:'3':'7'}}</p> -->
+    <!-- this is the use of the replace pipe of the angular4 -->
+  <!--  <p>{{myName | replace:'pritam':'suchana'}}  -->
+    <!-- this is the use of the lower case -->
+    <!-- <P>{{myName |lowercase}}</P> -->
+    <!-- this is for the upper case -->
+    <!-- <P>{{myName | uppercase}}</P> -->
+    <!-- <p>this is {{number|number:'2.3-5'}}</p> -->
+    <!-- this is the use of the currency -->
+    <!-- <p> the total currency is:{{number|currency:'eur':true}}</p> -->
+    <!-- this is for the americal dollar -->
+    <!-- <p>{{8.99|currency:'usd':true}}</p> -->
+    <!-- this is for the date transformation -->
+    <!-- <p>full date is: {{date|date:'fullDate'}}<p> -->
+    <!-- <p>short date is: {{date| date:'shortDate'}}<p> -->
+    <!-- <p>currentTime is: {{date| date:'mediamTime'}}<p> -->
+    <!-- this is the use of the form in-->
+     
+<!-- </div> -->
+
+<app-myform></app-myform>
+
+<!-- </div> 
+ </div>
+</div>
+<hr>
+<hr>-->

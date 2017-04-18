@@ -1,0 +1,76 @@
+<!-- this is for the form -->
+<div class="container">
+ <div class="row">
+  <div class="col-md-8 col-md-offset-2 col-mxs-10 col-xs-offset-1 col-lg-6 col-lg-offset-3">
+  <h1 class="text-danger">User Data</h1>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+   <div class="form-group">
+    <label>Name:</label>
+    <input type="text" #refName=ngModel  minlength="5" maxlength="20" required class="form-control" name="name" ngModel>
+    <div *ngIf="refName.errors && (refName.dirty||refName.touched)" class="alert alert-danger">
+     
+     <div [hidden]="!refName.errors.required">
+      Please enter the name!
+     </div>
+     <div [hidden]="!refName.errors.minlength">
+      Please enter atleast 5 characters!
+     </div>
+   </div>
+   </div>
+   <div class="form-group">
+    <label>Email:</label>
+    <input type="text"  #refEmail=ngModel minlength="10" maxlength="20"  required class="form-control" name="Email" ngModel>
+    <div *ngIf="refEmail.errors && (refEmail.dirty||refEmail.touched)" class="alert alert-danger">
+     
+     <div [hidden]="!refEmail.errors.required">
+      Please enter the Email!
+     </div>
+     <div [hidden]="!refEmail.errors.minlength">
+      Please enter atleast 10 characters!
+     </div>
+   </div>
+   </div>
+   <div class="form-group">
+    <label>Address:</label>
+    <input type="text" #refAddress=ngModel  minlength="10" maxlength="25" required class="form-control" name="Adress" ngModel>
+      <div *ngIf="refAddress.errors && (refAddress.dirty||refAddress.touched)" class="alert alert-danger">
+     
+      <div [hidden]="!refAddress.errors.required">
+      Please enter the Address!
+      </div>
+      <div [hidden]="!refAddress.errors.minlength">
+      Please enter atleast 10 characters!
+      </div>
+     </div>
+    </div>
+   <div class="form-group">
+    <label>City:</label>
+    <input type="text"  #refCity=ngModel  minlength="3" maxlenght="20" required class="form-control" name="city" ngModel>
+    <div *ngIf="refCity.errors && (refCity.dirty||refCity.touched)" class="alert alert-danger">
+     
+      <div [hidden]="!refCity.errors.required">
+      Please enter the city!
+      </div>
+      <div [hidden]="!refCity.errors.minlength">
+      Please enter atleast 3 characters!
+      </div>
+     </div>
+   </div>
+   <div class="form-group">
+    <label>Postal:</label>
+    <input type="text"  #refPostal=ngModel  minlength="3" maxlength="10" required class="form-control" name="postal" ngModel>
+    <div *ngIf="refPostal.errors && (refPostal.dirty||refPostal.touched)" class="alert alert-danger">
+     
+      <div [hidden]="!refPostal.errors.required">
+      Please enter the postalcode!
+      </div>
+      <div [hidden]="!refPostal.errors.minlength">
+      Please enter atleast 3 characters!
+      </div>
+     </div>
+   </div>
+   <button type="submit" class='btn btn-primary center-block'>Submit</button>
+  </form>
+  </div>
+ </div>
+</div>
